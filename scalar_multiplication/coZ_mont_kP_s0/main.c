@@ -114,27 +114,27 @@ int main(void){
 
 	//~ -------------------- results and timings ----------------------------------------------------
 	
-	//~ printf("\n");
-	//~ print_point_in_aff(&aff_P);
-	//~ if (is_on_curve_aff(&aff_P))
-		//~ printf("\nbase point : OK\n\n");
-	//~ else
-		//~ printf("\nbase point : NOT OK\n\n");
-	//~ /*print_point_in_jac(&jac_P);
-	//~ if (is_on_curve_jac(&jac_P))
-		//~ printf("jac base point : OK\n\n");
-	//~ else
-		//~ printf("jac base point : NOT OK\n\n");*/
+	printf("\n");
+	print_point_in_aff(&aff_P);
+	if (is_on_curve_aff(&aff_P))
+		printf("\nbase point : OK\n\n");
+	else
+		printf("\nbase point : NOT OK\n\n");
+	/*print_point_in_jac(&jac_P);
+	if (is_on_curve_jac(&jac_P))
+		printf("jac base point : OK\n\n");
+	else
+		printf("jac base point : NOT OK\n\n");*/
 
-	//~ printf("-------------------------- result --------------------------- \n\n");
+	printf("-------------------------- result --------------------------- \n\n");
 	
-	//~ from_jac_to_aff_outOfMontDomain(&aff_Q, &jac_Q);
-	//~ print_point_in_jac(&jac_Q); printf("\n");
-	//~ print_point_in_aff(&aff_Q); printf("\n");
-	//~ if (is_on_curve_jac(&jac_Q))
-		//~ printf("result point : OK\n\n");
-	//~ else
-		//~ printf("result point : NOT OK\n\n");
+	from_jac_to_aff_outOfMontDomain(&aff_Q, &jac_Q);
+	print_point_in_jac(&jac_Q); printf("\n");
+	print_point_in_aff(&aff_Q); printf("\n");
+	if (is_on_curve_jac(&jac_Q))
+		printf("result point : OK\n\n");
+	else
+		printf("result point : NOT OK\n\n");
 	
 	
 	printf("\nscal_mult: min : %lld, max : %lld,  Q1 : %lld, Q2 : %lld, Q3 : %lld CPU cycles\n", meanTimer1min/NSAMPLES, meanTimer1max/NSAMPLES, statTimer1[0], statTimer1[1], statTimer1[2]);
