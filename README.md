@@ -1,8 +1,8 @@
 # randomisation_using_pmns
 Contains examples of codes for randomised modular and scalar multiplications.
-
-
-
+<br />
+<br />
+<br />
 'modular_multiplication' directory contains three types of modular multiplication using the PMNS which parameters are given below:
  - p = 87798663188023528073030994638480388226916752551484470548433013409422826400553 (a 256-bit prime number)
  - n = 6
@@ -17,9 +17,9 @@ Contains examples of codes for randomised modular and scalar multiplications.
  The subdirectory 'mult_T1' contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated BEFORE calling multiplication function.
  
  The subdirectory 'mult_T2' contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated IN multiplication function.
- 
- 
- 
+<br />
+<br />
+<br /> 
  'scalar_multiplication' directory contains five types of scalar multiplication for the elliptic curve which parameters are given below:
   - p = 2^256 - 1539 (a 256-bit prime number)
  - Curve equation : y^2 = x^3 + 5
