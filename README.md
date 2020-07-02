@@ -20,9 +20,11 @@ Contains examples of codes for randomised modular and scalar multiplications.
 <br />
 <br />
 <br /> 
+<br />
  'scalar_multiplication' directory contains five types of scalar multiplication for the elliptic curve which parameters are given below:
   - p = 2^256 - 1539 (a 256-bit prime number)
  - Curve equation : y^2 = x^3 + 5
+ 
 Scalar multiplications are done using Algorithm 9 in https://www.matthieurivain.com/files/jcen11b.pdf 
 
 The subdirectory 'coZ_mont_kP_s0' contains number of cycles measurement for non-randomised scalar multiplication.
