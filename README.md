@@ -1,5 +1,5 @@
 # randomisation_using_pmns
-Contains examples of codes for randomised modular and scalar multiplications.
+This repository contains examples of codes for randomised modular and scalar multiplications.
 <br />
 <br />
 <br />
@@ -12,30 +12,33 @@ Contains examples of codes for randomised modular and scalar multiplications.
  - E(X) = X^6 - 3 
  - M(X) = 1565749579740.X^5 + 123136832359.X^4 − 1697278502061.X^3 + 2943623922815.X^2 − 838163884223.X + 2587093525133
  
- The subdirectory 'mult_T0' contains number of cycles measurement for non-randomised modular multiplication.
+'mult_T0' subdirectory contains number of cycles measurement for non-randomised modular multiplication.
  
- The subdirectory 'mult_T1' contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated BEFORE calling multiplication function.
+'mult_T1' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated BEFORE calling multiplication function.
  
- The subdirectory 'mult_T2' contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated IN multiplication function.
+'mult_T2' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated IN multiplication function.
 <br />
 <br />
-<br /> 
 <br />
- 'scalar_multiplication' directory contains five types of scalar multiplication for the elliptic curve which parameters are given below:
+
+'scalar_multiplication' directory contains five types of scalar multiplication for the elliptic curve which parameters are given below:
   - p = 2^256 - 1539 (a 256-bit prime number)
- - Curve equation : y^2 = x^3 + 5
+  - Curve equation: y^2 = x^3 + 5
+  - Base point affine coordinates:
+      - x = 33287780256326021305866951798235204535566731496774587847840493300116154562335
+      - y = 57200006855776545486303128794809149920862104667428222900231750752046655528108
  
 Scalar multiplications are done using Algorithm 9 in https://www.matthieurivain.com/files/jcen11b.pdf 
 
-The subdirectory 'coZ_mont_kP_s0' contains number of cycles measurement for non-randomised scalar multiplication.
+'coZ_mont_kP_s0' subdirectory contains number of cycles measurement for non-randomised scalar multiplication.
 
-The subdirectory 'coZ_mont_kP_s1' contains number of cycles measurement for non-randomised scalar multiplication. However, base point conversion (from binary to PMNS) is randomised.
+'coZ_mont_kP_s1' subdirectory contains number of cycles measurement for non-randomised scalar multiplication. However, base point conversion (from binary to PMNS) is randomised.
 
-The subdirectory 'coZ_mont_kP_s2' contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+'coZ_mont_kP_s2' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
 Here, the same randomisation polynomial is used for the conversion process and all the scalar multiplication.
 
-The subdirectory 'coZ_mont_kP_s3' contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
-Here, the same randomisation polynomial is used for each bit of the scalar, during the multiplication scalar.
+'coZ_mont_kP_s3' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+Here, the same randomisation polynomial Z and the corresponding polynomial J (i.e. J = Z.M mod E) are used for each bit of the scalar, during the multiplication scalar.
 
-The subdirectory 'coZ_mont_kP_s4' contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+'coZ_mont_kP_s4' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
 Here, a new randomisation polynomial is generated each time a modular multiplication or modular squaring is performed.
