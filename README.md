@@ -14,9 +14,9 @@ This repository contains examples of codes for randomised modular and scalar mul
  
 'mult_T0' subdirectory contains number of cycles measurement for non-randomised modular multiplication.
  
-'mult_T1' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated BEFORE calling multiplication function.
+'mult_T1' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated BEFORE calling the multiplication function.
  
-'mult_T2' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated IN multiplication function.
+'mult_T2' subdirectory contains number of cycles measurement for randomised modular multiplication, where randomisation polynomial is generated IN the multiplication function.
 <br />
 <br />
 <br />
@@ -35,10 +35,10 @@ Scalar multiplications are done using Algorithm 9 in https://www.matthieurivain.
 'coZ_mont_kP_s1' subdirectory contains number of cycles measurement for non-randomised scalar multiplication. However, base point conversion (from binary to PMNS) is randomised.
 
 'coZ_mont_kP_s2' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
-Here, the same randomisation polynomial is used for the conversion process and all the scalar multiplication.
+Here, the same randomisation polynomial Z is used for the conversion process and all the scalar multiplication.
 
 'coZ_mont_kP_s3' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
-Here, the same randomisation polynomial Z and the corresponding polynomial J (i.e. J = Z.M mod E) are used for each bit of the scalar, during the multiplication scalar.
+Here, the same randomisation polynomial Z and the corresponding polynomial J (i.e. J = Z.M mod E) are used for each bit of the scalar, during the scalar multiplication.
 
 'coZ_mont_kP_s4' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
-Here, a new randomisation polynomial is generated each time a modular multiplication or modular squaring is performed.
+Here, a new randomisation polynomial Z is generated each time a modular multiplication or modular squaring is performed, during the scalar multiplication.
