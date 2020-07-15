@@ -12,11 +12,11 @@ This repository contains examples of codes for randomised modular and scalar mul
  - E(X) = X^6 - 3 
  - M(X) = 1565749579740.X^5 + 123136832359.X^4 − 1697278502061.X^3 + 2943623922815.X^2 − 838163884223.X + 2587093525133
  
-'mult_T0' subdirectory contains number of cycles measurement for non-randomised modular multiplication.
+'mult_T0' subdirectory contains C code for number of cycles measurement for non-randomised modular multiplication.
  
-'mult_T1' subdirectory contains number of cycles measurement for randomised modular multiplication, where the randomisation polynomial Z is generated BEFORE calling the multiplication function.
+'mult_T1' subdirectory contains C code for number of cycles measurement for randomised modular multiplication, where the randomisation polynomial Z is generated BEFORE calling the multiplication function.
  
-'mult_T2' subdirectory contains number of cycles measurement for randomised modular multiplication, where the randomisation polynomial Z is generated IN the multiplication function.
+'mult_T2' subdirectory contains C code for  number of cycles measurement for randomised modular multiplication, where the randomisation polynomial Z is generated IN the multiplication function.
 <br />
 <br />
 <br />
@@ -30,15 +30,15 @@ This repository contains examples of codes for randomised modular and scalar mul
  
 Scalar multiplications are done using Algorithm 9 in https://www.matthieurivain.com/files/jcen11b.pdf 
 
-'coZ_mont_kP_s0' subdirectory contains number of cycles measurement for non-randomised scalar multiplication.
+'coZ_mont_kP_s0' subdirectory contains C code for number of cycles measurement for non-randomised scalar multiplication.
 
-'coZ_mont_kP_s1' subdirectory contains number of cycles measurement for non-randomised scalar multiplication. However, base point conversion (from binary to PMNS) is randomised.
+'coZ_mont_kP_s1' subdirectory contains C code for number of cycles measurement for non-randomised scalar multiplication. However, base point conversion (from binary to PMNS) is randomised.
 
-'coZ_mont_kP_s2' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+'coZ_mont_kP_s2' subdirectory contains C code for number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
 Here, the same randomisation polynomial Z is used for the conversion process and all the scalar multiplication.
 
-'coZ_mont_kP_s3' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+'coZ_mont_kP_s3' subdirectory contains C code for number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
 Here, a new randomisation polynomial Z is generated (and the corresponding polynomial J, i.e. J = Z.M mod E, is computed) for each bit of the scalar, during the scalar multiplication.
 
-'coZ_mont_kP_s4' subdirectory contains number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
+'coZ_mont_kP_s4' subdirectory contains C code for number of cycles measurement for randomised scalar multiplication. Base point conversion is also randomised.
 Here, a new randomisation polynomial Z is generated each time a modular multiplication or modular squaring is performed, during the scalar multiplication.
